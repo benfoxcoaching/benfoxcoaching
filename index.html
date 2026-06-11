@@ -40,6 +40,43 @@
     padding: 80px 32px 120px;
   }
 
+  .booking-block {
+    background: #fff;
+    border-radius: 4px;
+    padding: 48px 52px 40px;
+    margin-bottom: 72px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    border-top: 3px solid var(--accent);
+    text-align: center;
+  }
+
+  .booking-block h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(24px, 4vw, 34px);
+    font-weight: 400;
+    line-height: 1.25;
+    color: var(--charcoal);
+    margin-bottom: 12px;
+  }
+
+  .booking-block .booking-sub {
+    font-size: 16px;
+    color: var(--warm-mid);
+    max-width: 520px;
+    margin: 0 auto 32px;
+  }
+
+  #my-cal-inline {
+    width: 100%;
+    height: 700px;
+    overflow: auto;
+    text-align: left;
+  }
+
+  @media (max-width: 600px) {
+    #my-cal-inline { height: 620px; }
+  }
+
   .about-block {
     background: #fff;
     border-radius: 4px;
@@ -338,6 +375,7 @@
     .video-grid { grid-template-columns: 1fr; }
     .quote-card { padding: 28px 24px; }
     .about-block { padding: 32px 28px; }
+    .booking-block { padding: 32px 20px 28px; }
   }
 </style>
 </head>
@@ -350,6 +388,26 @@
     <p>Engineers, executives, and leaders who chose a different path — and found clarity, confidence, and careers worth having.</p>
   </header>
 
+  <div class="booking-block">
+    <h2>Book Your Diagnostic Call</h2>
+    <p class="booking-sub">Pick a time below. We'll get clear on what's keeping you stuck and whether coaching is the right next step.</p>
+    <div id="my-cal-inline"></div>
+  </div>
+
+  <script type="text/javascript">
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+
+    Cal("init", "diagnostic-call", { origin: "https://cal.com" });
+
+    Cal.ns["diagnostic-call"]("inline", {
+      elementOrSelector: "#my-cal-inline",
+      config: { layout: "month_view" },
+      calLink: "ben-fox-coaching/diagnostic-call",
+    });
+
+    Cal.ns["diagnostic-call"]("ui", { hideEventTypeDetails: false, layout: "month_view" });
+  </script>
+
   <div class="about-block">
     <h2>About Ben Fox Coaching</h2>
     <p>Ben Fox is a New York City-based career transformation coach specializing in engineering leaders who are done waiting for the "right time" to make a change.</p>
@@ -357,10 +415,6 @@
     <p>People often describe feeling a sense of calm when they talk to Ben, the kind that makes it easy to open up quickly and honestly. He pairs that with high emotional intelligence and a no-nonsense New York directness. He won't let you talk down to yourself, and he won't let you off the hook either.</p>
     <p>Ben works with clients as a real partner: sharing his own story, holding the mirror up, and staying in your corner long after the session ends. Many clients say they can still hear his voice encouraging them when he's not in the room.</p>
     <p>If you're a software engineering leader sitting on something: a better role, a business idea, a different relationship to work entirely, Ben helps you stop waiting and start moving.</p>
-  </div>
-
-  <div style="text-align: center; margin-bottom: 48px;">
-    <a href="https://cal.com/ben-fox-coaching/diagnostic-call?overlayCalendar=true" class="book-call-btn">Book A Call →</a>
   </div>
 
   <div class="section-label">Featured testimonial</div>
