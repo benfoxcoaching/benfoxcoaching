@@ -431,9 +431,9 @@
   @media (max-width: 600px) {
     .floating-nav-inner { padding: 0 16px; }
     .nav-brand { font-size: 13px; }
-    .nav-links { gap: 16px; }
-    .nav-links a { font-size: 10px; letter-spacing: 0.08em; }
-    .nav-links .nav-cta { padding: 6px 12px; }
+    .nav-links { gap: 12px; }
+    .hide-mobile { display: none; }
+    .nav-links .nav-cta { padding: 8px 16px; font-size: 11px; }
     .page-wrapper { padding-top: 120px; }
   }
 </style>
@@ -443,10 +443,10 @@
   <div class="floating-nav-inner">
     <a href="#" class="nav-brand">Ben Fox Coaching</a>
     <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#testimonials">Testimonials</a></li>
+      <li class="hide-mobile"><a href="#about">About</a></li>
+      <li class="hide-mobile"><a href="#testimonials">Testimonials</a></li>
       <li><a href="#book" class="nav-cta">Book a Call</a></li>
-      <li><a href="#podcast">Media</a></li>
+      <li class="hide-mobile"><a href="#podcast">Media</a></li>
     </ul>
   </div>
 </nav>
