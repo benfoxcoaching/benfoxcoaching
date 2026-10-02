@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WNYZGQTX0V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WNYZGQTX0V');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Something Has to Change | Ben Fox Coaching</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #E8F4FD;
+    --charcoal: #1E1E1E;
+    --warm-mid: #6B6560;
+    --accent: #8B5E3C;
+    --accent-light: #D4A97A;
+    --rule: #DDD8D0;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--cream);
+    color: var(--charcoal);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+  }
+
+  /* Nav (matches homepage) */
+  .floating-nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--rule);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  }
+  .floating-nav-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 32px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--charcoal);
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .nav-cta {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: var(--accent);
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 2px;
+    transition: background 0.2s ease;
+  }
+  .nav-cta:hover { background: #7a5234; }
+
+  .page-wrapper {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 136px 32px 120px;
+  }
+
+  /* Header */
+  .page-header {
+    text-align: center;
+    margin-bottom: 64px;
+  }
+  .eyebrow {
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+  }
+  .page-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 6vw, 56px);
+    font-weight: 400;
+    line-height: 1.15;
+    margin: 0 auto 24px;
+  }
+  .page-header p {
+    font-size: 17px;
+    color: var(--warm-mid);
+    max-width: 540px;
+    margin: 0 auto 14px;
+  }
+  .page-header p.lead {
+    font-size: 19px;
+    color: var(--charcoal);
+  }
+
+  /* Episode path */
+  .episodes {
+    list-style: none;
+    border-left: 2px solid var(--rule);
+    margin-left: 14px;
+    margin-bottom: 72px;
+  }
+  .episode {
+    position: relative;
+    padding: 0 0 48px 36px;
+  }
+  .episode:last-child { padding-bottom: 0; }
+  .step {
+    position: absolute;
+    left: -15px;
+    top: 28px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-weight: 500;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .episode-card {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    border-top: 3px solid var(--accent);
+    overflow: hidden;
+  }
+  .episode-head {
+    padding: 28px 32px 20px;
+  }
+  .show {
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 8px;
+  }
+  .episode h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(22px, 3.5vw, 28px);
+    font-weight: 400;
+    line-height: 1.25;
+  }
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    background: #111;
+  }
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    border: none;
+  }
+  .audio-wrapper {
+    padding: 0 32px;
+  }
+  .audio-wrapper iframe {
+    display: block;
+    width: 100%;
+    height: 232px;
+    border: none;
+    border-radius: 12px;
+  }
+  .episode-body {
+    padding: 24px 32px 28px;
+  }
+  .note {
+    font-size: 16px;
+    line-height: 1.8;
+  }
+  .jump {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid var(--rule);
+    font-size: 14px;
+    color: var(--warm-mid);
+  }
+
+  /* Closing CTA (matches homepage cta-block) */
+  .cta-block {
+    text-align: center;
+    padding: 60px 40px;
+    background: var(--charcoal);
+    border-radius: 4px;
+    color: #fff;
+  }
+  .cta-block h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(22px, 3.5vw, 30px);
+    font-weight: 400;
+    font-style: italic;
+    max-width: 540px;
+    margin: 0 auto 18px;
+  }
+  .cta-block p {
+    font-size: 16px;
+    color: #CFCAC4;
+    max-width: 520px;
+    margin: 0 auto 32px;
+  }
+  .cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+  }
+  .cta-btn {
+    display: inline-block;
+    background: var(--accent-light);
+    color: var(--charcoal);
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 14px 32px;
+    border-radius: 2px;
+    transition: background 0.2s ease;
+  }
+  .cta-btn:hover { background: #e0b988; }
+  .cta-btn.secondary {
+    background: transparent;
+    color: #fff;
+    border: 1px solid #6B6560;
+  }
+  .cta-btn.secondary:hover { background: rgba(255,255,255,0.08); }
+
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+  }
+
+  /* Footer (matches homepage) */
+  .page-footer {
+    margin-top: 60px;
+    padding-top: 32px;
+    border-top: 1px solid var(--rule);
+    text-align: center;
+  }
+  .footer-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .footer-details {
+    font-size: 13px;
+    color: var(--warm-mid);
+    line-height: 1.8;
+  }
+  .footer-details a {
+    color: var(--accent);
+    text-decoration: none;
+  }
+  .footer-details a:hover { text-decoration: underline; }
+
+  @media (max-width: 600px) {
+    .floating-nav-inner { padding: 0 16px; }
+    .nav-brand { font-size: 13px; }
+    .nav-cta { padding: 8px 16px; font-size: 11px; }
+    .page-wrapper { padding: 112px 20px 80px; }
+    .page-header p.lead { font-size: 18px; }
+    .episodes { margin-left: 12px; }
+    .episode { padding-left: 24px; }
+    .episode-head { padding: 24px 22px 18px; }
+    .audio-wrapper { padding: 0 22px; }
+    .episode-body { padding: 20px 22px 24px; }
+    .cta-block { padding: 48px 24px; }
+    .cta-btn { width: 100%; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .nav-cta, .cta-btn { transition: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="floating-nav">
+  <div class="floating-nav-inner">
+    <a href="https://benfoxcoaching.com" class="nav-brand">Ben Fox Coaching</a>
+    <a href="https://benfoxcoaching.com/#book" class="nav-cta">Book a Call</a>
+  </div>
+</nav>
+
+<div class="page-wrapper">
+
+  <header class="page-header">
+    <div class="eyebrow">Three conversations, in order</div>
+    <h1>Something has to change.</h1>
+    <p class="lead">You're good at your job. Maybe great at it. And something still feels off.</p>
+    <p>I've talked about that feeling on a lot of podcasts. These are the three I'd send a friend who's stuck. Listen in order: they go from noticing the problem, to understanding it, to deciding what to do about it.</p>
+  </header>
+
+  <ol class="episodes">
+
+    <li class="episode">
+      <span class="step" aria-hidden="true">1</span>
+      <div class="episode-card">
+        <div class="episode-head">
+          <div class="show">Modern CTO</div>
+          <h2>Why high-achieving engineers still feel something's missing</h2>
+        </div>
+        <div class="video-wrapper">
+          <iframe src="https://www.youtube.com/embed/2a4JmRQx4T8" allowfullscreen loading="lazy" title="Modern CTO: Why High-Achieving Engineers Still Feel Something's Missing"></iframe>
+        </div>
+        <div class="episode-body">
+          <p class="note">Start here if everything looks great on paper and you can't figure out why you feel this way. We talk about why a bigger title won't fix it, why you shouldn't look for the next job while you're running on empty, and how a principal engineer who'd already quit figured out what he wanted and became a CTO with time for school pickup.</p>
+          <p class="jump">Short on time? Start at 17:21, then skip to 32:36 for his story.</p>
+        </div>
+      </div>
+    </li>
+
+    <li class="episode">
+      <span class="step" aria-hidden="true">2</span>
+      <div class="episode-card">
+        <div class="episode-head">
+          <div class="show">The Impactful Engineer</div>
+          <h2>Before you quit your job, figure out what you're actually running from</h2>
+        </div>
+        <div class="audio-wrapper">
+          <iframe src="https://open.spotify.com/embed/episode/2kJ8K9sW7u4xmZ4QoGymlN?utm_source=generator" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" title="The Impactful Engineer, Episode 174 with Ben Fox"></iframe>
+        </div>
+        <div class="episode-body">
+          <p class="note">Listen to this one if you can't tell whether the job is the problem or you are. We get into bad managers, weak boundaries, and why high performers carry the same habits into the next job if they don't deal with them first.</p>
+        </div>
+      </div>
+    </li>
+
+    <li class="episode">
+      <span class="step" aria-hidden="true">3</span>
+      <div class="episode-card">
+        <div class="episode-head">
+          <div class="show">Back After Burnout</div>
+          <h2>Setting your quit date</h2>
+        </div>
+        <div class="audio-wrapper">
+          <iframe src="https://open.spotify.com/embed/episode/5UmdS7PUmEoSQfNjNTAjLp?utm_source=generator" loading="lazy" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" title="Back After Burnout: Setting Your Quit Date featuring Ben Fox"></iframe>
+        </div>
+        <div class="episode-body">
+          <p class="note">Listen to this one if leaving feels terrifying, even though you have options. We talk about picking a quit date, getting honest about your financial runway, and why you only need the next step, not the next ten.</p>
+          <p class="jump">Short on time? Skip to 9:22 for the quit date.</p>
+        </div>
+      </div>
+    </li>
+
+  </ol>
+
+  <div class="cta-block">
+    <h2>If one of these hit close to home, let's talk.</h2>
+    <p>A diagnostic call is a free conversation about where you are, what's draining you, and what your next step could be. If you'd rather start somewhere lower key, you can request to join the Reboot Room, a free monthly call with other engineering leaders asking the same questions. I talk with everyone before they join, so it stays a room where people can be honest.</p>
+    <div class="cta-actions">
+      <a class="cta-btn" href="https://benfoxcoaching.com/#book">Book a diagnostic call</a>
+      <a class="cta-btn secondary" href="mailto:ben@benfoxcoaching.com?subject=Reboot%20Room%20request">Request to join the Reboot Room</a>
+    </div>
+  </div>
+
+  <footer class="page-footer">
+    <div class="footer-name">Ben Fox Management LLC, DBA Ben Fox Coaching</div>
+    <div class="footer-details">
+      1442 Bedford Ave, Brooklyn, NY 11216<br>
+      <a href="tel:7185004611">(718) 500-4611</a> | <a href="mailto:ben@benfoxcoaching.com">ben@benfoxcoaching.com</a>
+    </div>
+  </footer>
+
+</div>
+</body>
+</html>
