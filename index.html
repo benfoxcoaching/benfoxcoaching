@@ -43,7 +43,20 @@
     text-align: center;
     margin-bottom: 72px;
   }
+  .headshot {
+    display: block;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 28px;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.10);
+  }
 
+  @media (max-width: 600px) {
+    .headshot { width: 140px; height: 140px; margin-bottom: 24px; }
+  }
   .eyebrow {
     font-family: 'DM Sans', sans-serif;
     font-weight: 500;
@@ -455,6 +468,7 @@
 
   <!-- 1. HEADER -->
   <header class="page-header">
+    <img src="ben-fox-headshot.jpg" alt="Ben Fox, career coach" class="headshot" width="180" height="180">
     <div class="eyebrow">Ben Fox Coaching</div>
     <h1>Ready to replace your income with work that doesn't make you miserable?</h1>
     <p>Coaching for software engineering leaders who know something has to change.</p>
